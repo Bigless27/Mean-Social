@@ -14,12 +14,14 @@ module.exports.login = function(req,res){
 			console.log("ERROR OUT");
 		}
 		if (results && results.length === 1){
+			console.log("loggin in")
 			var userData = results[0];//only object in array
 
 			res.json({email: req.body.email,
-						_id: userData._id});//sending back json
+						_id: userData._id,
+						username: userData.username,
+						image: userData.image});//sending back json
 			//hey! above is what's being stored in the localStorage
-
 			
 		}
 
