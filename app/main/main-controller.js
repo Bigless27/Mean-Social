@@ -46,7 +46,7 @@
 
 				$scope.difference = $scope.incomingWastes.length - $scope.wastes.length;
 			}
-			console.log('This is working')
+			console.log('Checking for new tweets')
 		}, 5000)
 
 		//you use angular.copy because

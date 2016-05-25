@@ -14,6 +14,7 @@ var app = express();
 var authenticationController = require('./server/controllers/authentication-controller.js')
 var profileController = require("./server/controllers/profile-controller")
 var wasteController = require("./server/controllers/waste-controller")
+var usersController = require("./server/controllers/users-controller");
 
 //last parameter is the name of the mongo database you're using
 mongoose.connect('mongodb://localhost:27017/time-waste')
@@ -44,9 +45,13 @@ app.post('/api/profile/updateUsername', profileController.updateUsername);
 app.post('/api/profile/updateBio', profileController.updateBio);
 
 
+
 //Wastes : end points
 app.post('/api/waste/post', wasteController.postWaste);
 app.get('/api/waste/get', wasteController.getWaste);
+
+//Users
+app.get('api/users/get', usersController.getUsers);
 
 //set up server
 app.listen('3000', function(){

@@ -26,5 +26,11 @@
 				controller: 'MainController'
 
 			})
+
+			.state('follow', {
+				url: "/follow-users", 
+				templateUrl: 'app/follow/follow.html',
+				controller: 'FollowController'
+			})
 	})
 }());

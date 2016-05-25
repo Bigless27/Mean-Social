@@ -15,8 +15,7 @@
 		<script src ="node_modules/ng-file-upload/dist/ng-file-upload.js"></script>
 		<script src ="node_modules/ng-file-upload/dist/ng-file-upload-all.js"></script>
 		<script src ="node_modules/ng-file-upload/dist/ng-file-upload-shim.js"></script>
-		<script></script>
-
+		<script src = "app/follow/follow-controller.js"></script>
 	</head>
 	<body>
 		<nav class = "navbar navbar-default navbar-fixed-top" ng-controller = 'NavigationController'>
@@ -29,6 +28,7 @@
 				</div>
 				<div ng-show = "loggedIn">
 					<a ui-sref = "editProfile">Edit Profile</a>
+					<a ui-sref = 'follow'> Follow Users</a>
 					<a ng-click = "logOut()">Logout</a>
 				</div>	
 			</div>
